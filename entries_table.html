@@ -1,0 +1,47 @@
+  <div class="table-responsive">
+    <table class="table table-bordered align-middle text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Дата</th>
+          <th>Статус</th>
+          <th>Тип</th>
+          <th>Категория</th>
+          <th>Подкатегория</th>
+          <th>Сумма</th>
+          <th>Комментарий</th>
+          <th>Действие</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% if user.is_authenticated %}
+      <a class="btn btn-sm btn-outline-secondary" href="{% url 'form' %}">Создать новую запись</a>
+
+        {% for entry in entries %}
+            <tr>
+                <td>{{ entry.date }}</td>
+                <td>{{ entry.status }}</td>
+                <td>{{ entry.type }}</td>
+                <td>{{ entry.category }}</td>
+                <td>{{ entry.subcategory }}</td>
+                <td>{{ entry.amount }}</td>
+                <td>{{ entry.comment }}</td>
+                <td><a class="btn btn-sm btn-outline-secondary" href="{% url 'edit_entry' entry.id %}">Изменить</a></td>
+            </tr>
+        {% endfor %}
+
+        <tr>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          <td><a class="btn btn-sm btn-outline-secondary" href="{% url 'form' %}">Создать новую запись</a></td>
+        </tr>
+      {% endif %}
+
+
+      </tbody>
+    </table>
+  </div>
