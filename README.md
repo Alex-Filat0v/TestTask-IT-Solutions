@@ -2,16 +2,18 @@
 
 <h1>Инструкция по запуску проекта:</h1>
 
+<h3>Для начала вам нужно создать и настроить окружение и перейти в папку cash_flow_management с помощью следующей команды:</h3>
+  <h5>cd ./cash_flow_management</h5>
+
 <h3>1. Установка зависимостей:</h3>
-  <h5><button onclick="myFunction()">pip install -r requirements.txt</button></h5>
+  <h5>pip install -r requirements.txt</h5>
 
 <h3>2. Настройка базы данных:</h3>
-  <h5><button onclick="myFunction()">cd ./cash_flow_management</button></h5>
-  <h5><button onclick="myFunction()">python manage.py makemigrations</button></h5>
-  <h5><button onclick="myFunction()">python manage.py migrate</button></h5>
+  <h5>python manage.py makemigrations</h5>
+  <h5>python manage.py migrate</h5>
 
 <h3>3. Запуск веб-сервиса:</h3>
-  <h5><button onclick="myFunction()">python manage.py runserver</button></h5>
+  <h5>python manage.py runserver</h5>
   
 <h5>4. Работа с приложением:</h5>
    <h5>После запуска сервера переходим по адресу 127.0.0.1:8000</h5>
